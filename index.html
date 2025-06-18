@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StriveFit – Personal Training & Wellness</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- === Navbar === -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About </a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- === Hero Section with Background === -->
+  <header class="hero-section" id="home">
+    <div class="hero-content">
+      <h1>Welcome to <span>StriveFit</span></h1>
+      <p>Your journey to strength and wellness starts here.</p>
+      <a href="enquiry.html" class="btn">Join Now</a>
+
+    </div>
+  </header>
+
+  <!-- === About Section === -->
+  <section class="container card animate" id="about">
+    <h2>About Us</h2>
+    <p>StriveFit is a modern training studio focused on performance, accountability, and transformation. From elite coaching to wellness tracking, we've got your goals covered.</p>
+  </section>
+
+  <!-- === Services Section === -->
+  <section class="container card animate" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>1-on-1 Personal Training</li>
+      <li>Group HIIT Classes</li>
+      <li>Body Composition Tracking</li>
+      <li>Online Coaching Programs</li>
+    </ul>
+  </section>
+
+  <!-- === Contact Section === -->
+  <section class="container card animate" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: infostrivefit@gmail.com</p>
+    <p>Phone: +064 417 1990</p>
+    <a href="contact.html" class="btn">Get in Touch</a>
+    
+
+
+
+  </section>
+
+  <!-- === Footer === -->
+  <footer>
+    <p>&copy; 2025 StriveFit. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

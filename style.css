@@ -1,0 +1,354 @@
+/* === CSS Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* === Root Variables === */
+  :root {
+    --main-bg: #ffffff;
+    --primary-color: #e50914; /* energetic red */
+    --text-color: #121212;
+    --dark-bg: #111111;
+    --light-grey: #f4f4f4;
+    --font-main: 'Orbitron', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+  
+  /* === Body Base Styles === */
+  body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  /* === Typography === */
+  h1, h2, h3 {
+    font-family: var(--font-main);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  
+  /* === Navigation Bar === */
+  nav {
+    background-color: var(--dark-bg);
+    padding: 15px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+  }
+  
+  /* === Layout Using Flexbox === */
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* === Cards or Boxes === */
+  .card {
+    background-color: var(--light-grey);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* === Buttons === */
+  button,
+  .btn,
+  .button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: var(--font-main);
+  }
+  
+  button:hover,
+  .btn:hover,
+  .button:hover {
+    background-color: #c40810;
+    transform: translateY(-2px);
+  }
+  
+  button:active,
+  .btn:active,
+  .button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* === Hero Section === */
+  .hero-section {
+    background: url('images/pexels-muribotelho-1865131.jpg') center/cover no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-family: var(--font-main);
+    margin-bottom: 20px;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+  
+  /* === Contact Section Flex Layout === */
+  .contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: var(--light-grey);
+  }
+  
+  .contact-form, .contact-info {
+    flex: 1 1 300px;
+  }
+  
+  .contact-info h3 {
+    font-family: var(--font-main);
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    line-height: 1.6;
+  }
+  
+  /* === Animate On Scroll === */
+  .animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* === Media Queries === */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+  
+    .contact-section {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  }
+  
+
+
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .team .card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color);
+  }
+  
+
+
+
+  .contact-form {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-family: var(--font-main);
+    color: var(--text-color);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    resize: vertical;
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: var(--light-grey);
+  }
+  
+  .contact-info {
+    flex: 1 1 300px;
+  }
+  
+  .contact-info h3 {
+    font-family: var(--font-main);
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    line-height: 1.6;
+  }
+  
+  /* Responsive fix */
+  @media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enquiry | StriveFit</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+</head>
+<body>
+
+  <!-- === Navigation Menu === -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="enquiry.html" class="active">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- === Main Container === -->
+  <div class="container">
+    <section class="card">
+      <h1>Send an Enquiry</h1>
+      <p>Looking to start your transformation journey? Tell us what you're looking for and we'll get back to you within 24 hours.</p>
+    </section>
+
+    <section class="card contact-section">
+      <div class="contact-form">
+        <form id="enquiryForm">
+          <div class="form-group">
+            <label for="name">Name and Surname</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Amanda Smith" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option value="personal_training">Personal Training</option>
+              <option value="nutrition">Nutrition Coaching</option>
+              <option value="hiit">HIIT Classes</option>
+              <option value="online_program">Online Program</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell Us More</label>
+            <textarea id="message" name="message" rows="6" placeholder="What are your goals, challenges, and timelines?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Submit Enquiry</button>
+        </form>
+
+        
+        <div id="responseMessage" style="margin-top: 1rem; font-weight: bold;"></div>
+      </div>
+
+      <div class="contact-info">
+        <h3><i class="fas fa-dumbbell"></i> StriveFit HQ</h3>
+        <p>56 Melrose ave<br />Cape Town, South Africa</p>
+
+        <h3><i class="fas fa-envelope"></i> Email</h3>
+        <p>infostrivefit@gmail.com</p>
+
+        <h3><i class="fas fa-phone"></i> Phone</h3>
+        <p>+27 64 417 1990</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 StriveFit. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
