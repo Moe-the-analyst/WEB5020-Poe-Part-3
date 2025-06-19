@@ -1,5 +1,4 @@
-
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     // === Enquiry Form Validation ===
     const enquiryForm = document.getElementById("enquiryForm");
     const responseDiv = document.getElementById("responseMessage");
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
   
         contactResponse.style.color = "green";
-        contactResponse.textContent = `Thanks ${name}, your ${type.toLowerCase()} has been received. We'll be in touch soon!`;
+        contactResponse.textContent = `Thanks ${name}, your request has been received. We'll be in touch soon!`;
         contactForm.reset();
       });
     }
